@@ -1,0 +1,26 @@
+GET http://localhost:1234/movies
+
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+GET http://localhost:1234/movies?genre=Action
+
+
+
+POST http://localhost:1234/movies
+Content-Content-Type: application/json
+ {
+    "title": "The Dark Dee",
+    "year": 2008,
+    "director": "Christopher Nocalsada ",
+    "duration": 1523,
+    "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+    "genre": ["Drama"],
+    "rate": 9.0
+  }
+
+
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Content-Type: application/json
+ {
+    "year": 3008,
+  }
