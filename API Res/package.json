@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "bun run --watch ./app.js",
-    "start": "node app start",
+    "start": "node app.js",
     "build": "tsc"
   }
 }
