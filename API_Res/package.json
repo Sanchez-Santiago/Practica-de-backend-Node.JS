@@ -1,7 +1,7 @@
 {
   "name": "api-res",
-  "module": "index.ts",
-  "type": "module",
+  "version": "1.0.0",
+  "main": "app.js",
   "devDependencies": {
     "@types/bun": "latest"
   },

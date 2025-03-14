@@ -1,5 +1,4 @@
-import { title } from 'node:process';
-
+const { title } = require('node:process');
 const express = require('express');
 const movies = require('./movies.json');
 const crypto = require('node:crypto');
