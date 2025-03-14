@@ -13,6 +13,8 @@
     "zod": "3.24.2"
   },
   "scripts": {
-    "dev": "bun run --watch ./app.js"
+    "dev": "bun run --watch ./app.js",
+    "start": "node app start",
+    "build": "tsc"
   }
 }
