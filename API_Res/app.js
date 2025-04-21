@@ -2,7 +2,7 @@
 import express from 'express';
 import { corsMiddleware } from './middlewares/cors.js';
 import { createMovieRouter } from './routes/movies.js';
-import { MovieModel } from './models/database/moviesMySql.js';
+
 
 export const createAPP = ({ MovieModel }) => {
 
