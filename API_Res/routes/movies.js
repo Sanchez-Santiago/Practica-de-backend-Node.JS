@@ -1,18 +1,18 @@
-import {Router} from 'express';
-import movies from '../movies.json';
-import { validateMovie, validatePartialMovie } from '../schemas/movies';
-import { MovieModel } from '../models/movies';
-import { MovieController } from '../controllers/movies';
+// routes/movies.js
+import { Router } from 'express';
+import { MovieController } from '../controllers/movies.js';
 
-
-export const router = Router();
-
-router.get('/', MovieController.getAll);
-
-router.get('/:id', MovieController.getById);
-
-router.post('/', MovieController.create);
-
-router.patch('/:id', MovieController.update);
-
-router.delete('/:id', MovieController.delete);
+export const createMovieRouter = ({ MovieModel }) => {
+  const routerMovies = Router();
+  
+  // Corregido: nombre del parámetro (ahora es MovieModel con M mayúscula)
+  const movieController = new MovieController({ MovieModel });
+  
+  routerMovies.get('/', movieController.getAll);
+  routerMovies.get('/:id', movieController.getById);
+  routerMovies.post('/', movieController.create);
+  routerMovies.patch('/:id', movieController.update);
+  routerMovies.delete('/:id', movieController.delete);
+  
+  return routerMovies;
+}

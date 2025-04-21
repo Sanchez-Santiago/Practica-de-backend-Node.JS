@@ -13,6 +13,8 @@
     "zod": "3.24.2"
   },
   "scripts": {
+    "start-SQL": "bun run --watch ./server-with-mysql.js",
+    "start-local": "bun run --watch ./server-with-local.js",
     "dev": "bun run --watch ./app.js",
     "start": "node app.js",
     "build": "tsc"
