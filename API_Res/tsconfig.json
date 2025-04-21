@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // tu configuración actual
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    // +++++ NUEVAS OPCIONES +++++
+    "allowJs": true, // permite .js en la compilación
+    "outDir": "dist" // carpeta de salida (ajusta según prefieras)
+  },
+  // +++++ AJUSTE DE INCLUDE +++++
+  "include": [
+    "**/*.ts", // todos los .ts
+    "**/*.js" // todos los .js
+  ],
+  "exclude": ["node_modules", "dist"]
+}
